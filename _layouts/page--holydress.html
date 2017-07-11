@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+{% if page.main-video %}
+<div class='embed-container'>
+    <iframe src='{{ page.main-video }}' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
+{% endif %}
+
+{% if page.main-image %}
+    <img src="{{ site.url }}{{ site.assets }}{{ page.main-image }}" ></img>
+{% endif %}
+
+<div class="wrapper">
+    <article class="post">
+
+      <header class="hero">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+      </header>
+
+      <div class="post-content trio__content">
+        {{ content }}
+      </div>
+
+    </article>
+</div>
+
+{% for image in page.images %}
+    <img src="{{ site.url }}{{ site.assets }}{{ image.image_path }}" alt="{{ image.alt}}"/>
+    {% if forloop.first %}
+        <div class="wrapper--verynarrow"><p class="credits">A collaboration with <a href="http://www.leoniesmelt.com">LEONIE SMELT</a> and <a href="http://www.joachimrotteveel.com">JOACHIM ROTTEVEEL</a><br/>
+        with the support of Quartier21 / Museums Quartier Vienna</p></div>
+    {% endif %}
+{% endfor %}
+
+<div class="projects__container wrapper">
+    <h2 class="projects__header">Projects</h2>
+    <div class="projects__container--row">
+        <div class="projects">
+            <a href="{{ site.url }}/tremor"><img src="{{ site.url }}{{ site.assets }}tremor_icon.jpg"></img></a>
+            <a href="{{ site.url }}/political_lace"><img src="{{ site.url }}{{ site.assets }}political_lace_icon.jpg"></img></a>
+        </div>
+        <div class="projects">
+            <a href="{{ site.url }}/media_vintage"><img src="{{ site.url }}{{ site.assets }}mediavintage_icon1.jpg"></img></a>
+        </div>
+    </div>
+</div>

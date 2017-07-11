@@ -1,0 +1,37 @@
+.credits {
+    margin: $spacing-unit/2 0;
+}
+
+
+.trio__content {
+    display: flex;
+    flex-direction: row;
+
+    :first-child, :nth-child(2) {
+        margin-right: 50px;
+    }
+
+    @include media-query($on-palm){
+        display: block;
+    }
+}
+
+
+.img-content-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.portrait {
+
+    width: 50%;
+    height: 50%;
+    &:first-of-type {
+
+        margin-right: calc(#{$spacing-unit-photos} / 2);
+    }
+}
+
+.padded {
+    margin-bottom: $spacing-unit*1.5;
+}

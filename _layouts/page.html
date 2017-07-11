@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+{% if page.main-video %}
+<div class='embed-container'>
+    <iframe src='{{ page.main-video }}' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
+{% endif %}
+
+{% if page.main-image %}
+    <img src="{{ site.url }}{{ site.assets }}{{ page.main-image }}" ></img>
+{% endif %}
+
+<div class="wrapper--narrow">
+    <article class="post">
+
+      <header class="hero">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+      </header>
+
+      <div class="post-content">
+        {{ content }}
+      </div>
+
+    </article>
+</div>
+
+{% for image in page.images %}
+    <img src="{{ site.url }}{{ site.assets }}{{ image.image_path }}" alt="{{ image.alt}}"/>
+{% endfor %}
+
+
+<div class="projects__container wrapper">
+    <h2 class="projects__header">Projects</h2>
+    <div class="projects__container--row">
+        <div class="projects">
+            <a href="{{ site.url }}/tremor"><img src="{{ site.url }}{{ site.assets }}tremor_icon.jpg"></img></a>
+            <a href="{{ site.url }}/holydress"><img src="{{ site.url }}{{ site.assets }}holydress_icon.jpg"></img></a>
+        </div>
+        <div class="projects">
+            <a href="{{ site.url }}/media_vintage"><img src="{{ site.url }}{{ site.assets }}mediavintage_icon1.jpg"></img></a>
+        </div>
+    </div>
+</div>

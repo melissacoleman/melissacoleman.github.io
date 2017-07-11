@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+     <div class="hero-wrapper">
+         <div class="video-container">
+
+            <video class="video" src="{{ site.url }}{{ site.assets }}{{ page.video }}" preload="true" playsinline autoplay muted loop></video>
+
+            <!-- <iframe class="youtube-video" width="1920" height="1080" src="https://www.youtube.com/embed/8AyvywhLVgw?modestbranding=1&autoplay=1&controls=0&fs=0&loop=1&rel=0&showinfo=0&disablekb=1&playlist=8AyvywhLVgw" frameborder="0" allowfullscreen></iframe> -->
+            <div class="header-home">
+                {% include header.html %}
+            </div>
+         </div>
+
+    </div>
+
+    <main class="page-content home-parallax" aria-label="Content">
+
+        <div class="projects__container">
+            <h2 class="projects__header">Projects</h2>
+            <div class="projects--home wrapper">
+                <a href="{{ site.url }}/tremor"><img src="{{ site.url }}{{ site.assets }}tremor_icon.jpg"></img></a>
+                <a href="{{ site.url }}/holydress"><img src="{{ site.url }}{{ site.assets }}holydress_icon.jpg"></img></a>
+            </div>
+            <div class="projects--home wrapper">
+                <a href="{{ site.url }}/political_lace"><img src="{{ site.url }}{{ site.assets }}political_lace_icon.jpg"></img></a>
+                <a href="{{ site.url }}/media_vintage"><img src="{{ site.url }}{{ site.assets }}mediavintage_icon1.jpg"></img></a>
+            </div>
+
+        </div>
+
+        {% include footer.html %}
+    </main>
+
+  </body>
+
+</html>

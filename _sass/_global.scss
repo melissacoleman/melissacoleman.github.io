@@ -1,0 +1,52 @@
+/* ---------------------------------------
+global white space reset
+--------------------------------------- */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+/*	---------------------------------------
+	browser quirks
+	--------------------------------------- */
+
+/* FIX Safari, Firefox */
+/* 'vertical-align: top' or 'bottom' removes space below images */
+
+img {
+	border: 0;
+	vertical-align: top;
+}
+
+
+/* FIX IE 6 */
+/* without 'overflow: hidden', 'height: 0' won't work */
+.clear {
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+
+/* target only IE6, hide select boxes from popping through a layer */
+* html select.hideFromIE6 {
+	visibility: hidden;
+}
+
+
+/*	---------------------------------------
+	some default styles
+	--------------------------------------- */
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.hidden {
+	display: none;
+}
+.invisible {
+	visibility: hidden;
+}

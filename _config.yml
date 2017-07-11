@@ -1,0 +1,36 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Melissa Coleman
+email: info@melissacoleman.nl
+description: > # this means to ignore newlines until "baseurl:"
+  Melissa Coleman is an artist, curator and creative technologist specialised in fashion tech and connected objects. Her art and exhibitions critically explore the relationship of fashion, politics and technology. She exhibits worldwide and her work has been covered by New Scientist, Wired, The Guardian, Vogue, Fast Company and Dezeen. She co-founded Rotterdam’s V2_E-textile Workspace and London’s E-Stitches meetup at the V&A Museum. She is part of the core team that created Hackaball, a connected ball that teaches kids coding, one of Time Magazine's best inventions of 2015.
+titles: Artist | Freelance Curator | Creative Technologist and Wearable Tech Specialist
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "www.melissacoleman.nl" # the base hostname & protocol for your site, e.g. http://example.com
+assets: "/assets/"
+twitter_username: liskatecoleman
+github_username: melissacoleman
+instagram_username: melissakatecoleman
+linkedin_username: melissa-coleman-1109ab33
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock

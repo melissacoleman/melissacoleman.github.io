@@ -1,0 +1,41 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <div>
+            <img src="{{ site.url }}/assets/melissa_coleman.jpg"></img>
+        </div>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <h2>Bio</h2>
+        <p class="bio">{{ site.description | escape }}</p>
+        {% if site.email %}
+        <div class="email">
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </div>
+        {% endif %}
+        <ul class="social-media-list">
+          {% if site.twitter_username %}
+          <li>
+              <a href="https://twitter.com/{{ site.twitter_username }}"><span class="icon icon--twitter">{% include icon-twitter.svg %}</span></a>
+          </li>
+          {% endif %}
+          {% if site.instagram_username %}
+          <li>
+              <a href="https://instagram.com/{{ site.instagram_username }}"><span class="icon icon--instagram">{% include icon-instagram.svg %}</span></a>
+          </li>
+          {% endif %}
+          {% if site.linkedin_username %}
+          <li>
+              <a href="https://linkedin.com/in/{{ site.linkedin_username }}"><span class="icon icon--linkedin">{% include icon-linkedin.svg %}</span></a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
