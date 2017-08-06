@@ -56,6 +56,18 @@
     text-decoration: none;
   }
 
+  &:before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    left: 25%;
+    background-color: #000;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
   &:after {
     content: "";
     position: absolute;
@@ -71,6 +83,12 @@
     width: 100%;
     left: 0;
   }
+
+  &:hover:before {
+    width: 100%;
+    left: 0;
+  }
+
 
 }
 
