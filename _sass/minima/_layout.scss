@@ -31,11 +31,13 @@
 .logo-container {
     margin-top: 50px;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .logo {
   @include headerfont;
   @include relative-font-size(1.625);
+
   line-height: 1;
   font-weight: 300;
   letter-spacing: -1px;
@@ -44,7 +46,7 @@
   padding-bottom: 10px;
   color: black;
   text-align: center;
-  display: block;
+  display: inline-block;
 
   &:visited {
       color: black;
@@ -54,35 +56,20 @@
     text-decoration: none;
   }
 
-  &:before {
-    content: "";
-    position: absolute;
-    width: 80%;
-    height: 1px;
-    bottom: 0;
-    left: 27px;
-    background-color: #000;
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-  }
-
   &:after {
     content: "";
     position: absolute;
     width: 50%;
     height: 1px;
     bottom: 0;
-    left: 60px;
-    background-color: #000;
+    left: 25%;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
   }
 
-  &:hover:before {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
+  &:hover:after {
+    width: 100%;
+    left: 0;
   }
 
 }
