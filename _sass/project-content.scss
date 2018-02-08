@@ -1,37 +1,34 @@
 .credits {
-    margin: $spacing-unit/2 0;
+  margin: $spacing-unit / 2 0;
 }
 
 
 .trio__content {
-    display: flex;
-    flex-direction: row;
+  @include media-query($on-palm) {
+    display: block;
+  }
+  display: flex;
+  flex-direction: row;
 
-    :first-child, :nth-child(2) {
-        margin-right: 50px;
-    }
-
-    @include media-query($on-palm){
-        display: block;
-    }
+  :first-child,
+  :nth-child(2) {
+    margin-right: 50px;
+  }
 }
 
 
-.img-content-row{
-    display: flex;
-    flex-direction: row;
+.img-content-row {
+  display: flex;
+  flex-direction: row;
 }
 
 .portrait {
 
-    width: 50%;
-    height: 50%;
-    &:first-of-type {
-
-        margin-right: calc(#{$spacing-unit-photos} / 2);
-    }
+  &:first-of-type {
+    margin-right: calc(#{$spacing-unit-photos} / 2);
+  }
 }
 
 .padded {
-    margin-bottom: $spacing-unit*1.5;
+  margin-bottom: $spacing-unit * 1.5;
 }

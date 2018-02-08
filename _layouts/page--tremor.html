@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% if page.main-image %}
-    <img src="{{ site.url }}{{ site.assets }}{{ page.main-image }}" ></img>
+    {% include lazyload-image.html name=page.main-image class='image-full' %}
 {% endif %}
 
 <div class="wrapper">
@@ -21,8 +21,8 @@ layout: default
 </div>
 
 <div class="wrapper img-content-row">
-    <img class="portrait" src="{{ site.url }}{{ site.assets }}{{ page.image1 }}" alt="tremor"/>
-    <img class="portrait" src="{{ site.url }}{{ site.assets }}{{ page.image2 }}" alt="tremor"/>
+    {% include lazyload-image.html name=page.image1  portrait="portrait" variant=" placeholder-container--portrait" %}
+    {% include lazyload-image.html name=page.image2  portrait="portrait" variant=" placeholder-container--portrait" %}
 </div>
 <div class="wrapper--verynarrow"><p class="credits">A collaboration with designer <a href="http://www.leoniesmelt.com">LEONIE SMELT</a><br/>
 with the support of the Dutch Embassy in London</p></div>
@@ -35,7 +35,7 @@ with the support of the Dutch Embassy in London</p></div>
 
 <div class="wrapper--verynarrow"><p class="credits">Images and video by <a href="http://byclaudiarocha.com">Claudia Rocha,</a><br/> and makeup by <a href="https://twitter.com/billiepingault">Billie Pingault</a></p></div>
 
-<img src="{{ site.url }}{{ site.assets }}{{ page.image3 }}" alt="tremor"/>
+{% include lazyload-image.html name=page.image3 %}
 
 <div class="projects__container wrapper">
     <h2 class="projects__header">Projects</h2>

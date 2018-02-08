@@ -13,29 +13,34 @@
 .video-container {
   margin: 0;
   position: relative;
+
   header {
     position: absolute;
     top: 0;
     width: 100%;
   }
+
   @include media-query($on-palm) {
-      header {
-        top: 20px;
-      }
+    header {
+      top: 20px;
+    }
   }
 }
 
 .logo {
-    z-index: 9999;
+  z-index: 9999;
 }
 
 .site-nav {
-    z-index: 10000;
+  z-index: 10000;
 }
 
 video {
   width: 100%;
   max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .youtube-video {
@@ -51,26 +56,25 @@ video {
 }
 
 iframe {
-  /* optional */
+  // optional
   width: 100%;
   height: 100%;
 }
 
 .home-parallax {
-	background: white;
-	margin-top: 800px;
-    @include media-query($on-palm) {
-        margin-top: 250px;
-    }
+  @include media-query($on-palm) {
+    margin-top: 250px;
+  }
+  background: $white;
+  margin-top: 800px;
 }
 
 .hero--home__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    @include media-query($on-palm) {
-        display: block;
-        flex: none;
-    }
+  @include media-query($on-palm) {
+    display: block;
+    flex: none;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

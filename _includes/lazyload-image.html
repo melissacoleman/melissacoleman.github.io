@@ -1,0 +1,13 @@
+<div class="placeholder-container{{include.variant}} {{include.portrait}}">
+    <img
+    class="placeholder"
+    src="{{ site.url }}{{ site.assets }}{{ page.image-folder }}{{ include.name }}.svg"
+    alt="placeholder" />
+    <img
+    data-sizes="auto"
+    data-src="{{ site.url }}{{ site.assets }}{{ page.image-folder }}{{ include.name }}.jpg"
+    data-srcset="{{ site.url }}{{ site.assets }}{{ page.image-folder }}{{ include.name }}.jpg,
+    {{ site.url }}{{ site.assets }}{{ page.image-folder }}{{ include.name }}@2x.jpg 2x"
+    class="{{include.class}} lazyload"
+    alt="tremor" />
+</div>

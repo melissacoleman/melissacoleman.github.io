@@ -6,7 +6,7 @@
   <body>
      <div class="hero-wrapper">
          <div class="video-container">
-
+            {% include lazyload-image.html name='homepage/teaser' class='image-full' %}
             <video class="video" src="{{ site.url }}{{ site.assets }}{{ page.video }}" preload="true" playsinline autoplay muted loop></video>
 
             <!-- <iframe class="youtube-video" width="1920" height="1080" src="https://www.youtube.com/embed/8AyvywhLVgw?modestbranding=1&autoplay=1&controls=0&fs=0&loop=1&rel=0&showinfo=0&disablekb=1&playlist=8AyvywhLVgw" frameborder="0" allowfullscreen></iframe> -->

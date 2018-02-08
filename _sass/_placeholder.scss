@@ -1,0 +1,43 @@
+.placeholder-container {
+  $placeholder-background: #eee;
+  background-size: cover;
+  background-color: $placeholder-background;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+
+  &--portrait {
+    width: 100%;
+  }
+
+  ::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s linear;
+
+    &.placeholder {
+      position: relative;
+      filter: blur(30px);
+      // this is needed so Safari keeps sharp edges
+      transform: scale(1);
+    }
+
+    &.lazyloaded,
+    &.placeholder {
+      opacity: 1;
+      transition: opacity 1s linear;
+    }
+  }
+}
