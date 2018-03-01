@@ -9,7 +9,7 @@ layout: default
 {% endif %}
 
 {% if page.main-image %}
-    <img src="{{ site.url }}{{ site.assets }}{{ page.main-image }}" ></img>
+    {% include lazyload-image.html name=page.main-image class='image-full' %}
 {% endif %}
 
 <div class="wrapper">
@@ -27,7 +27,7 @@ layout: default
 </div>
 
 {% for image in page.images %}
-    <img src="{{ site.url }}{{ site.assets }}{{ image.image_path }}" alt="{{ image.alt}}"/>
+    {% include lazyload-image.html name=image.image_path %}
     {% if forloop.first %}
         <div class="wrapper--verynarrow"><p class="credits">A collaboration with <a href="http://www.leoniesmelt.com">LEONIE SMELT</a> and <a href="http://www.joachimrotteveel.com">JOACHIM ROTTEVEEL</a><br/>
         with the support of Quartier21 / Museums Quartier Vienna</p></div>

@@ -6,9 +6,9 @@ permalink: holydress
 main-video: https://player.vimeo.com/video/154576178
 main-video-image: HolyDressVideo4.jpg
 images:
-- image_path: holydress/theholydress.jpg
+- image_path: holydress/theholydress
   alt: Holy Dress
-- image_path: holydress/holydress_screenshot.jpg
+- image_path: holydress/holydress_screenshot
   alt: Holy Dress
 ---
 
