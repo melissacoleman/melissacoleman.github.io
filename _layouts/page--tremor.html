@@ -1,10 +1,7 @@
 ---
-layout: default
+layout: default 
 ---
-
-{% if page.main-image %}
-    {% include lazyload-image.html name=page.main-image class='image-full' %}
-{% endif %}
+{% if page.main-image %} {% include lazyload-image.html name=page.main-image class='image-full' %} {% endif %}
 
 <div class="wrapper">
     <article class="post">
@@ -23,8 +20,10 @@ layout: default
 <div class="wrapper img-content-row">
     {% include lazyload-image.html name=page.image1 portrait="portrait" variant=" placeholder-container--portrait" %} {% include lazyload-image.html name=page.image2 portrait="portrait" variant=" placeholder-container--portrait" %}
 </div>
-<div class="wrapper--verynarrow">
-    <p class="credits">A collaboration with designer <a href="http://www.leoniesmelt.com">LEONIE SMELT</a><br/> with the support of the Dutch Embassy in London</p>
+<div class="wrapper">
+    <div class="credits">
+        <p>A collaboration with designer <a href="http://www.leoniesmelt.com">LEONIE SMELT</a><br/> with the support of the Dutch Embassy in London</p>
+    </div>
 </div>
 
 {% if page.main-video %}
@@ -33,9 +32,10 @@ layout: default
 </div>
 {% endif %}
 
-<div class="wrapper--verynarrow">
-    <p class="credits">Images and video by <a href="http://byclaudiarocha.com">Claudia Rocha,</a><br/> and makeup by <a href="https://twitter.com/billiepingault">Billie Pingault</a></p>
+<div class="wrapper">
+    <div class="credits">
+        <p>Images and video by <a href="http://byclaudiarocha.com">Claudia Rocha,</a><br/> and makeup by <a href="https://twitter.com/billiepingault">Billie Pingault</a></p>
+    </div>
 </div>
 
-{% include lazyload-image.html name=page.image3 %}
-{% include projects.html %}
+{% include lazyload-image.html name=page.image3 %} {% include projects.html %}

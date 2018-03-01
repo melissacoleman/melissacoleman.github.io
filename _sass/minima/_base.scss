@@ -196,18 +196,9 @@ pre {
 
 .wrapper--narrow {
   @extend .wrapper;
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 4));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 4));
+  max-width: -webkit-calc(#{$content-width} - (100px * 4));
+  max-width:         calc(#{$content-width} - (100px * 4));
 }
-
-.wrapper--verynarrow {
-  @extend .wrapper;
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 6));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 6));
-  text-align: center;
-}
-
-
 
 /**
  * Clearfix

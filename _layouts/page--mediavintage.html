@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 {% if page.main-video %}
 <div class='embed-container'>
     <iframe src='{{ page.main-video }}' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
@@ -9,31 +8,27 @@ layout: default
 {% endif %}
 
 <div class="wrapper img-content-row">
-    {% include lazyload-image.html name=page.main-image1  portrait="portrait" variant=" placeholder-container--portrait" %}
-    {% include lazyload-image.html name=page.main-image2  portrait="portrait" variant=" placeholder-container--portrait" %}
+    {% include lazyload-image.html name=page.main-image1 portrait="portrait" variant=" placeholder-container--portrait" %} {% include lazyload-image.html name=page.main-image2 portrait="portrait" variant=" placeholder-container--portrait" %}
 </div>
 
 <div class="wrapper">
     <article class="post">
 
-      <header class="hero">
-        <h1 class="post-title">{{ page.title | escape }}</h1>
-      </header>
+        <header class="hero">
+            <h1 class="post-title">{{ page.title | escape }}</h1>
+        </header>
 
-      <div class="post-content trio__content">
-        {{ content }}
-      </div>
+        <div class="post-content trio__content">
+            {{ content }}
+        </div>
 
     </article>
 </div>
 
-{% for image in page.images %}
-    {% include lazyload-image.html name=image.image_path %}
-    {% if forloop.first %}
-        <div class="wrapper--verynarrow"><p class="credits">Supported by <a href="http://v2.nl">V2_ Institute of the Unstable Media</a><br/>
-With Piem Wirtz, Stan Wannet, Simon de Bakker,<br/>
-Joachim Rotteveel and Meg Grant </p></div>
-    {% endif %}
-{% endfor %}
-
-{% include projects.html %}
+{% for image in page.images %} {% include lazyload-image.html name=image.image_path %} {% if forloop.first %}
+<div class="wrapper">
+    <div class="credits">
+        <p>Supported by <a href="http://v2.nl">V2_ Institute of the Unstable Media</a><br/> With Piem Wirtz, Stan Wannet, Simon de Bakker,<br/> Joachim Rotteveel and Meg Grant</p>
+    </div>
+</div>
+{% endif %} {% endfor %} {% include projects.html %}
