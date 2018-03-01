@@ -62,11 +62,8 @@ iframe {
 }
 
 .home-parallax {
-  @include media-query($on-palm) {
-    margin-top: 250px;
-  }
   background: $white;
-  margin-top: 800px;
+  margin-top: 56.25%;
 }
 
 .hero--home__content {
