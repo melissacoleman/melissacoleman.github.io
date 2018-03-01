@@ -1,45 +1,33 @@
-
 .projects__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 150px;
-    margin-bottom: 100px;
+    padding-top: $spacing-unit;
+    margin-bottom: $spacing-unit;
     position: relative;
 
     h2 {
-        margin-bottom: 50px;
+        margin-bottom: 10%;
     }
-
     @include media-query($on-palm) {
         margin-top: 0;
         margin-bottom: 50px;
     }
-
-}
-
-.projects__container--row {
-    @extend .projects__container;
-    flex-direction: row;
-    align-items: flex-start;
-    margin:0;
-    padding: 0;
 }
 
 .projects {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    &:first-of-type {
-        margin-right: $spacing-unit-photos/2;
-    }
-
-    & > a:nth-of-type(2) {
-        margin-top: $spacing-unit-photos/2;
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr);
+    grid-column-gap: $spacing-unit-photos/2;
+    grid-row-gap: $spacing-unit-photos/2;
+    @media screen and (min-width: $on-palm) {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
     }
 
     a {
         position: relative;
+        object-fit: cover;
+        width: 100%;
 
         &:after {
             content: "";
@@ -55,58 +43,4 @@
             background-color: rgba(225, 225, 225, 0.4);
         }
     }
-
-}
-
-.projects--home {
-    display: flex;
-    flex-direction: row;
-
-
-        a {
-            width: -webkit-calc(50%);
-            width: calc(50%);
-            position: relative;
-
-            &:after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                z-index: 1;
-            }
-
-            &:hover:after {
-                background-color: rgba(221, 221, 221, 0.5);
-            }
-        }
-
-        img {
-            padding: 0;
-            margin: 0;
-        }
-
-        a:first-child {
-            margin-right: calc(#{$spacing-unit-photos} / 2);
-            margin-right: -webkit-calc(#{$spacing-unit-photos} / 2);
-        }
-
-        &:first-of-type a {
-            margin-bottom: calc(#{$spacing-unit-photos} / 2);
-            margin-bottom: -webkit-calc(#{$spacing-unit-photos} / 2);
-        }
-
-        @include media-query($on-palm) {
-            flex-wrap: wrap;
-            a {
-                width: 100%;
-            }
-
-            a:first-child {
-                margin-right: 0;
-            }
-        }
-
 }

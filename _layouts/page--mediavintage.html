@@ -9,8 +9,8 @@ layout: default
 {% endif %}
 
 <div class="wrapper img-content-row">
-    <img class="portrait" src="{{ site.url }}{{ site.assets }}{{ page.main-image1 }}" alt="mediavintage"/>
-    <img class="portrait" src="{{ site.url }}{{ site.assets }}{{ page.main-image2 }}" alt="mediavintage"/>
+    {% include lazyload-image.html name=page.main-image1  portrait="portrait" variant=" placeholder-container--portrait" %}
+    {% include lazyload-image.html name=page.main-image2  portrait="portrait" variant=" placeholder-container--portrait" %}
 </div>
 
 <div class="wrapper">
@@ -28,7 +28,7 @@ layout: default
 </div>
 
 {% for image in page.images %}
-    <img src="{{ site.url }}{{ site.assets }}{{ image.image_path }}" alt="{{ image.alt}}"/>
+    {% include lazyload-image.html name=image.image_path %}
     {% if forloop.first %}
         <div class="wrapper--verynarrow"><p class="credits">Supported by <a href="http://v2.nl">V2_ Institute of the Unstable Media</a><br/>
 With Piem Wirtz, Stan Wannet, Simon de Bakker,<br/>
@@ -36,15 +36,4 @@ Joachim Rotteveel and Meg Grant </p></div>
     {% endif %}
 {% endfor %}
 
-<div class="projects__container wrapper">
-    <h2 class="projects__header">Projects</h2>
-    <div class="projects__container--row">
-        <div class="projects">
-            <a href="{{ site.url }}/tremor"><img src="{{ site.url }}{{ site.assets }}tremor_icon.jpg"></img></a>
-            <a href="{{ site.url }}/political_lace"><img src="{{ site.url }}{{ site.assets }}political_lace_icon.jpg"></img></a>
-            </div>
-        <div class="projects">
-            <a href="{{ site.url }}/holydress"><img src="{{ site.url }}{{ site.assets }}holydress_icon.jpg"></img></a>
-        </div>
-    </div>
-</div>
+{% include projects.html %}

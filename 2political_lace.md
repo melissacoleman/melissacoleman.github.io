@@ -1,7 +1,8 @@
 ---
 layout: page
+category: project
 title: Political Lace
-permalink: /political_lace/
+permalink: political_lace
 main-image: politicallace/political_lace_heaven1.jpg
 year: 2016
 credits: Melissa Coleman

@@ -1,7 +1,8 @@
 ---
 layout: page--tremor
+category: project
 title: Tremor
-permalink: /tremor/
+permalink: tremor
 main-image: tremor
 main-video: https://player.vimeo.com/video/220275371
 year: 2017

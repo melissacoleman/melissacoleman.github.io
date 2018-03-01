@@ -1,0 +1,12 @@
+<div class="projects__container wrapper">
+    <h2 class="projects__header">Projects</h2>
+    <div class="projects">
+        {% for p in site.pages %}
+            {% if p.category == "project" and page.permalink != p.permalink %}
+                <a href="{{p.url}}">
+                    <img src="{{ site.url }}{{ site.assets }}{{p.permalink}}_icon.jpg"></img>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

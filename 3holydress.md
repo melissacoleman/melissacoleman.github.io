@@ -1,7 +1,8 @@
 ---
 layout: page--holydress
+category: project
 title: The Holy Dress
-permalink: /holydress/
+permalink: holydress
 main-video: https://player.vimeo.com/video/154576178
 main-video-image: HolyDressVideo4.jpg
 images:

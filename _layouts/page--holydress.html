@@ -34,15 +34,5 @@ layout: default
     {% endif %}
 {% endfor %}
 
-<div class="projects__container wrapper">
-    <h2 class="projects__header">Projects</h2>
-    <div class="projects__container--row">
-        <div class="projects">
-            <a href="{{ site.url }}/tremor"><img src="{{ site.url }}{{ site.assets }}tremor_icon.jpg"></img></a>
-            <a href="{{ site.url }}/political_lace"><img src="{{ site.url }}{{ site.assets }}political_lace_icon.jpg"></img></a>
-        </div>
-        <div class="projects">
-            <a href="{{ site.url }}/media_vintage"><img src="{{ site.url }}{{ site.assets }}mediavintage_icon1.jpg"></img></a>
-        </div>
-    </div>
-</div>
+
+{% include projects.html %}

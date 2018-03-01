@@ -1,17 +1,18 @@
 ---
 layout: page--mediavintage
+category: project
 title: Media Vintage
-permalink: /media_vintage/
-main-image1: mediavintage/mediavintage_charlie0_cropped_web.jpg
-main-image2: mediavintage/mediavintage_bravo0_web.jpg
+permalink: media_vintage
+main-image1: mediavintage/mediavintage_charlie0_cropped_web
+main-image2: mediavintage/mediavintage_bravo0_web
 year: 2009
 credits: Melissa Coleman
 images:
-- image_path: mediavintage/mediavintage_alpha0_web.jpg
+- image_path: mediavintage/mediavintage_alpha0_web
   alt: suitcase with morse
-- image_path: mediavintage/mediavintage_charlie1.jpg
+- image_path: mediavintage/mediavintage_charlie1
   alt: burburry coat with punchcards
-- image_path: mediavintage/mediavintage_bravo1.jpg
+- image_path: mediavintage/mediavintage_bravo1
   alt: a tapestry with braille
 
 ---

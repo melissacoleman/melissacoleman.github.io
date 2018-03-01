@@ -9,43 +9,33 @@ layout: default
 <div class="wrapper">
     <article class="post">
 
-      <header class="hero">
-        <h1 class="post-title">{{ page.title | escape }}</h1>
-      </header>
+        <header class="hero">
+            <h1 class="post-title">{{ page.title | escape }}</h1>
+        </header>
 
-      <div class="post-content">
-        {{ content }}
-      </div>
+        <div class="post-content">
+            {{ content }}
+        </div>
 
     </article>
 </div>
 
 <div class="wrapper img-content-row">
-    {% include lazyload-image.html name=page.image1  portrait="portrait" variant=" placeholder-container--portrait" %}
-    {% include lazyload-image.html name=page.image2  portrait="portrait" variant=" placeholder-container--portrait" %}
+    {% include lazyload-image.html name=page.image1 portrait="portrait" variant=" placeholder-container--portrait" %} {% include lazyload-image.html name=page.image2 portrait="portrait" variant=" placeholder-container--portrait" %}
 </div>
-<div class="wrapper--verynarrow"><p class="credits">A collaboration with designer <a href="http://www.leoniesmelt.com">LEONIE SMELT</a><br/>
-with the support of the Dutch Embassy in London</p></div>
+<div class="wrapper--verynarrow">
+    <p class="credits">A collaboration with designer <a href="http://www.leoniesmelt.com">LEONIE SMELT</a><br/> with the support of the Dutch Embassy in London</p>
+</div>
 
 {% if page.main-video %}
-    <div class='embed-container'>
-        <iframe src='{{ page.main-video }}' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-    </div>
+<div class='embed-container'>
+    <iframe src='{{ page.main-video }}' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
 {% endif %}
 
-<div class="wrapper--verynarrow"><p class="credits">Images and video by <a href="http://byclaudiarocha.com">Claudia Rocha,</a><br/> and makeup by <a href="https://twitter.com/billiepingault">Billie Pingault</a></p></div>
+<div class="wrapper--verynarrow">
+    <p class="credits">Images and video by <a href="http://byclaudiarocha.com">Claudia Rocha,</a><br/> and makeup by <a href="https://twitter.com/billiepingault">Billie Pingault</a></p>
+</div>
 
 {% include lazyload-image.html name=page.image3 %}
-
-<div class="projects__container wrapper">
-    <h2 class="projects__header">Projects</h2>
-    <div class="projects__container--row">
-        <div class="projects">
-            <a href="{{ site.url }}/political_lace"><img src="{{ site.url }}{{ site.assets }}political_lace_icon.jpg"></img></a>
-            <a href="{{ site.url }}/holydress"><img src="{{ site.url }}{{ site.assets }}holydress_icon.jpg"></img></a>
-        </div>
-        <div class="projects">
-            <a href="{{ site.url }}/media_vintage"><img src="{{ site.url }}{{ site.assets }}mediavintage_icon1.jpg"></img></a>
-        </div>
-    </div>
-</div>
+{% include projects.html %}
