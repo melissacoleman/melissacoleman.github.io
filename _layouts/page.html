@@ -9,7 +9,7 @@ layout: default
 {% endif %}
 
 {% if page.main-image %}
-<img src="{{ site.url }}{{ site.assets }}{{ page.main-image }}"></img>
+    {% include lazyload-image.html name=page.main-image %}
 {% endif %}
 
 <div class="wrapper--narrow">
@@ -27,7 +27,7 @@ layout: default
 </div>
 
 {% for image in page.images %}
-<img src="{{ site.url }}{{ site.assets }}{{ image.image_path }}" alt="{{ image.alt}}" />
+    {% include lazyload-image.html name=image.image_path %}
 {% endfor %}
 
 {% include projects.html %}

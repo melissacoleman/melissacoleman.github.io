@@ -3,15 +3,15 @@ layout: page
 category: project
 title: Political Lace
 permalink: political_lace
-main-image: politicallace/political_lace_heaven1.jpg
+main-image: politicallace/political_lace_heaven1
 year: 2016
 credits: Melissa Coleman
 images:
-- image_path: politicallace/political_lace_detail.jpg
+- image_path: politicallace/political_lace_detail
   alt: political lace detail with microcontroller
-- image_path: politicallace/political_lace_concrete.jpg
+- image_path: politicallace/political_lace_concrete
   alt: political lace concrete background
-- image_path: politicallace/political_lace_heaven2.jpg
+- image_path: politicallace/political_lace_heaven2
   alt: political lace dreaming blue sky
 
 ---
