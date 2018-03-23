@@ -9,9 +9,15 @@
 
 .header-home {
     background-color: var(--background-color-home);
+    @media screen and (min-width: $on-palm) {
+        align-items: flex-end;
+    }
 
     .logo-container {
         color: var(--white);
+        @media screen and (min-width: $on-palm) {
+            margin-bottom: 15%;
+        }
     }
 
     .logo {
