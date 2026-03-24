@@ -9,12 +9,6 @@
   font-weight: bold;
 }
 
-@font-face {
-  font-family: Greycliff;
-  src:  url('../fonts/GreycliffCF-Regular.woff2') format('woff2'),
-  url('../fonts/GreycliffCF-Regular.woff') format('woff');
-}
-
 @mixin headerfont {
-  font-family: 'Fonecian', 'Greycliff', Helvetica, Arial, Tahoma, Verdana;
+  font-family: 'Fonecian', Helvetica, Arial, Tahoma, Verdana;
 }
